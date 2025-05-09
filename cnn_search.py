@@ -26,9 +26,11 @@ def predict_image(path):
     with torch.no_grad():
         output = model(img_tensor)
         pred = torch.argmax(output, dim=1)
-    return "ai 이미지" if pred.item() == 0 else "실제 이미지"
+    return "AI 생성 이미지" if pred.item() == 0 else "실제 이미지"
 
 # 테스트 예시
 if __name__ == "__main__":
     print(predict_image("val/fake_1.png"))  # 파일 경로에 맞게 수정
 
+#test_6:22
+#test_2 
