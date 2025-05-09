@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from torchvision import models, transforms
 from PIL import Image
-#git test 연결입니다 
+
 # 디바이스 설정
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -26,8 +26,11 @@ def predict_image(path):
     with torch.no_grad():
         output = model(img_tensor)
         pred = torch.argmax(output, dim=1)
-    return "AI 생성 이미지" if pred.item() == 0 else "실제 이미지"
+    return "ai 이미지" if pred.item() == 0 else "실제 이미지"
+
+
 
 # 테스트 예시
 if __name__ == "__main__":
     print(predict_image("val/fake_1.png"))  # 파일 경로에 맞게 수정
+
