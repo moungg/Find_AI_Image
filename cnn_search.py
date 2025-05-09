@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from torchvision import models, transforms
 from PIL import Image
-
+#git test 연결입니다 
 # 디바이스 설정
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -31,6 +31,3 @@ def predict_image(path):
 # 테스트 예시
 if __name__ == "__main__":
     print(predict_image("val/fake_1.png"))  # 파일 경로에 맞게 수정
-
-#test_6:22
-#test_2 
